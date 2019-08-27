@@ -2,7 +2,7 @@
 
 
 server:
-  port: 9096
+  port: 9097
 
 
 spring:
@@ -22,7 +22,7 @@ spring:
     username: julian_user
     password: Us3r@_Us3r
     driver-class-name: org.postgresql.Driver
-#    sql-script-encoding: UTF-8
+    sql-script-encoding: UTF-8
   application:
     name: microservice-mine
 
