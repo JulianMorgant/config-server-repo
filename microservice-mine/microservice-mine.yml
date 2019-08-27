@@ -1,0 +1,48 @@
+
+
+
+server:
+  port: 9096
+
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        formatSql: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database: postgresql
+
+
+  datasource:
+    url: jdbc:postgresql://postgresql-julian.alwaysdata.net:5432/julian_messages
+    username: julian_user
+    password: Us3r@_Us3r
+    driver-class-name: org.postgresql.Driver
+#    sql-script-encoding: UTF-8
+  application:
+    name: microservice-mine
+
+#service-configs
+service-config:
+  maxPages: 20
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      #holds a comma-seperated list of eureka services this service will use
+      #to resolve locations
+      default-zone: http://localhost:8761/eureka
